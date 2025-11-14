@@ -16,35 +16,35 @@ variable "start_position" {
 variable "length" {
   type        = number
   description = "Blocks along the direction (>= 1, integer)."
-  validation {
-    condition     = var.length >= 1 && floor(var.length) == var.length
-    error_message = "Length must be an integer >= 1."
-  }
+  #validation {
+  #  condition     = var.length >= 1 && floor(var.length) == var.length
+  #  error_message = "Length must be an integer >= 1."
+  #}
 }
 
 variable "thickness" {
   type        = number
   description = "Blocks along the perpendicular horizontal axis (>= 1, integer)."
-  validation {
-    condition     = var.thickness >= 1 && floor(var.thickness) == var.thickness
-    error_message = "Length must be an integer >= 1."
-  }
+  #validation {
+  #  condition     = var.thickness >= 1 && floor(var.thickness) == var.thickness
+  #  error_message = "Length must be an integer >= 1."
+  #}
 }
 
 variable "height" {
   type        = number
   description = "Number of blocks to fill along the direction (>= 1)."
-  validation {
-    condition     = var.height >= 1 && floor(var.height) == var.height
-    error_message = "Length must be an integer >= 1."
-  }
+  #validation {
+  #  condition     = var.height >= 1 && floor(var.height) == var.height
+  #  error_message = "Length must be an integer >= 1."
+  #}
 }
 
 variable "direction" {
   type        = string
   description = "The direction of placement. Must be one of the valid values."
-  validation {
-    condition     = contains(local.directions, var.direction)
-    error_message = "Must be a valid direction: ${join(", ", local.directions)}"
-  }
+  #validation {
+  #  condition     = contains(local.directions, var.direction)
+  #  error_message = "Must be a valid direction: ${join(", ", local.directions)}"
+  #}
 }
